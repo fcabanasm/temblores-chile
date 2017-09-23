@@ -1,5 +1,4 @@
-source 'https://rubygems.org' do 
-  ruby '2.3.3'
+source 'https://rubygems.org' do
   gem 'telegram-bot-ruby'
   gem 'httparty'
   gem 'pry'
