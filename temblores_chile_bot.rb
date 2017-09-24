@@ -1,9 +1,9 @@
 require 'telegram/bot'
 require 'httparty'
 require 'pry'
+require 'dotenv/load'
 
-
-token = ENV["TOKEN"]
+token = ENV["BOT_API_TOKEN"]
 
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |message|
