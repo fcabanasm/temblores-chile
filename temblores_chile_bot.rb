@@ -13,10 +13,10 @@ Telegram::Bot::Client.run(token) do |bot|
     case message.text
   
     when '/start'
-      bot.api.send_message(chat_id: message.chat.id, text: "Bot Temblores Chile - desarrollado por @fcabanasm")
+      bot.api.send_message(chat_id: message.chat.id, text: "Bot Temblores Chile se encuentra en desarrollo, contactar a @fcabanasm para más información")
       
     when '/help'
-      bot.api.send_message(chat_id: message.chat.id, text: "Bot Temblores Chile - se encuentra aún en desarrollo")
+      bot.api.send_message(chat_id: message.chat.id, text: "Bot Temblores Chile se encuentra en desarrollo, contactar a @fcabanasm para más información")
   
     when '/twitter'
       twitter = Twitter::REST::Client.new do |config|
@@ -40,7 +40,7 @@ Telegram::Bot::Client.run(token) do |bot|
       bot.api.send_message(chat_id: message.chat.id, text: page.at('table').text.strip)
       
     else
-      bot.api.send_message(chat_id: message.chat.id, text: "Bot Temblores Chile (en desarrollo)")
+      bot.api.send_message(chat_id: message.chat.id, text: "Bot Temblores Chile se encuentra en desarrollo, contactar a @fcabanasm para más información")
     end
     
   end
